@@ -1,8 +1,23 @@
+import { render } from '@testing-library/react';
+import React, { Component } from 'react';
+
+
 //Exercise 1
 state = {
     firstName: 'Reggie',
     lastName: 'White'
 }
+
+class App extends Component{
+    constructor (props){
+        super(props);
+        this.name = [
+            {firstName},
+            {lastName},
+        ]
+    }
+}
+
 
 //Exercise 2
 state = {
@@ -32,3 +47,10 @@ state = {
         }
     ]
 }
+render(){
+    return(
+        <DisplayName />
+    )
+}
+
+export default App;

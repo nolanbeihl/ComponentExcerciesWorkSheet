@@ -1,34 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import DisplayName from './components/DisplayName';
+import { Component } from 'react';
 
 
 
-function App() {
+class App extends Component {
   //Exercise 1
-  this.state = {
+  state = {
     firstName: 'Reggie',
     lastName: 'White',
 }
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-          <DisplayName firstName={this.state.firstName}/>
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  );
+  render(){
+    return(
+      <div>
+      <h1>Persons name</h1>
+      <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/>
+      </div>
+      );
+}
 }
 
 export default App;

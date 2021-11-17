@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import App from '../../App';
 
-const NamesList = (props) => {
-    var list = [];
-    for (var i = 0; i < prop.names.length; i++) {
-        list.push(prop.name[i]);
-        <h1>prop.name[i]</h1>;
+class NamesList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            names : ""
+        }
     }
-    return tbody(list)
+
+  render(){
+      return ( 
+        <div>
+        <ul type="none">
+        <h1>List of Names:</h1>
+        <ul><h1>{this.names}</h1></ul> <br/>
+        </ul>
+        </div>
+      );
+    }
+}
 
 
-        // <div>
-        // <ul type="none">
-        // <h1>List of Names:</h1>
-        // <li>{props.names}</li> <br/>
-        // </ul>
-        // </div>
-//     );
-// }
+    
+
+
+
 export default NamesList;

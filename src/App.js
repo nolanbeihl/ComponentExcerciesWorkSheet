@@ -21,10 +21,10 @@ componentDidMount(){
 }
 
 generateList() {
-  let list = ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly']
-    console.log(list);
+  let nameList = ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly']
+    console.log(nameList);
     this.setState({
-      names : list
+      names : nameList
     })
   }
 
@@ -36,7 +36,9 @@ render(){
       <h1>Exercise 1</h1>
       <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/>
       <h1>Exercise 2</h1>
-      <h1>{this.state.names}</h1>
+      {this.state.names.map(name => {
+        return <h4>{name}</h4> 
+      })}
       </div>
       );
   }

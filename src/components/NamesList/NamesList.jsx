@@ -14,7 +14,7 @@ class NamesList extends Component {
         <div>
         <ul type="none">
         <h1>List of Names:</h1>
-        <ul><h1>{this.names}</h1></ul> <br/>
+        <ul><h1>{App.props.names}</h1></ul> <br/>
         </ul>
         </div>
       );
